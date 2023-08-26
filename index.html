@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kitchen Timer</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karma:wght@300;400;500;700&family=Philosopher:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="data:," />
+    <link rel="icon" href="/assets/img/timer.png" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Kitchen Timer</h1>
+        <nav class="buttons_timer">
+          <button id="min5" class="button">5 <span>Min</span></button>
+          <button id="min10" class="button">10 <span>Min</span></button>
+          <button id="min15" class="button">15 <span>Min</span></button>
+          <button id="min30" class="button">30 <span>Min</span></button>
+        </nav>
+      </header>
+      <div class="countdown_container">
+        <p id="countdown">00 : 00</p>
+      </div>
+      <audio
+        id="player"
+        src="/assets/mixkit-tick-tock-clock-timer-1045.wav"
+        type="audio/mp3"
+        loop
+      ></audio>
+      <div class="buttons_main">
+        <button type="button" class="button_start" id="btnStart">Start</button>
+        <button type="button" class="button_stop" id="btnStop">Reset</button>
+      </div>
+      <div class="set_timer">
+        <h2>Set Timer</h2>
+        <div class="set_timer__container">
+          <div class="set_timer__block">
+            <label class="set_timer__label">Minutes</label>
+            <input
+              class="set_timer__input"
+              id="minutes"
+              type="number"
+              placeholder="0"
+              min="0"
+            />
+          </div>
+          <div class="set_timer__block">
+            <label class="set_timer__label">Seconds</label>
+            <input
+              class="set_timer__input"
+              id="seconds"
+              type="number"
+              placeholder="0"
+              min="0"
+            />
+          </div>
+        </div>
+        <button type="button" class="set_timer__button" id="btnSetTimer">
+          Set Timer
+        </button>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

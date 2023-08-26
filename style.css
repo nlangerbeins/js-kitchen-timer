@@ -1,0 +1,273 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url(/assets/img/background.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #e3e0df;
+    min-height: 100vh;
+}
+
+.wrapper {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    margin: 20px 20px 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+h1 {
+    margin: 0 0 30px;
+    font-size: 70px;
+    text-align: center;
+    font-family: 'Karma', serif;
+    color: #424242;
+    text-shadow: 1px 1px 3px #8b8b8b; 
+}
+
+/*-------------------Buttons Min-----------------------*/
+
+.buttons_timer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.button {
+    padding: 20px;
+    margin: 0 20px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 1px solid rgba(90, 90, 90, 0.5);
+    background-color: transparent;
+    font-size: 20px;
+    line-height: 25px;
+    box-shadow: 5px 5px 1px 0px #919191;
+    font-family: 'Philosopher', sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+    color: #424242;
+}
+
+.button:hover {
+    transform: scale(1.1, 1.1);
+    background-color: rgba(6, 155, 6, 0.5);
+    border: 1px solid rgba(0, 128, 0, 0.5);
+    transition: all 1s ease-in-out;
+}
+
+.button span {
+    font-size: 14px;
+    display: block;
+}
+
+.countdown_container {
+    font-size: 100px;
+    margin: 0 0 30px;
+    text-align: center;
+    font-family: 'Philosopher', sans-serif;
+    text-shadow: 1px 1px 3px #1b1b1b; 
+    color: #424242;
+}
+
+.buttonChosen {
+    transform: scale(1.1, 1.1);
+    background-color: rgba(6, 155, 6, 0.5);
+    border: 1px solid rgba(0, 128, 0, 0.5);
+}
+
+.buttonDisabled {
+    opacity: 0.6;
+}
+
+
+/*------------------------Buttons Start / Stop--------------------*/
+.buttons_main {
+    display: flex;
+    margin: 0 0 60px;
+}
+
+.button_start {
+    padding: 15px 35px;
+    margin: 0 10px 0 0;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    font-size: 16px;
+    background-color: #069b06;
+    color: #fff;
+    font-family: 'Philosopher', sans-serif;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.button_stop {
+    padding: 15px 35px;
+    margin: 0 0 0 10px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    font-size: 16px;
+    background-color: #ad2d0d;
+    color: #fff;
+    font-family: 'Philosopher', sans-serif;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+/*-------------------------Set Timer-------------------------*/
+.set_timer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #a38607;
+    border-radius: 50px;
+    padding: 10px 50px;
+    background-color: rgba(163, 134, 7, 0.1);
+}
+
+h2 {
+    font-size: 30px;
+    margin: 0 10px 0px;
+    font-family: 'Karma', serif;
+    color: #3f3401;
+}
+
+.set_timer__container {
+    display: flex;
+    justify-content: center;
+}
+
+.set_timer__block {
+    display: flex;
+    flex-direction: column;
+    margin: 0 10px 20px;
+    color: #3f3401;
+}
+
+.set_timer__label {
+    font-size: 18px;
+    text-align: center;
+    font-family: 'Philosopher', sans-serif;
+}
+
+.set_timer__input {
+    width: 120px;
+    padding: 8px 5px;
+    font-size: 18px;
+    margin: 5px 0 0;
+    outline: none;
+    border-radius: 5px;
+    caret-color: #008000;
+    font-family: 'Philosopher', sans-serif;
+    font-weight: bold;
+    background: transparent;
+    color: #3f3401;
+    border: 1px solid rgba(49, 49, 49, 0.7);
+    box-shadow: 5px 5px 1px 0px #5f5f5f;
+}
+
+.set_timer__input::placeholder {
+    color: #000;
+    font-family: 'Philosopher', sans-serif;
+    font-weight: 700;
+}
+
+.set_timer__button {
+    padding: 15px 30px;
+    margin: 0 0 10px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    font-size: 16px;
+    background-color: rgba(180, 149, 12, 0.9);
+    color: #fff;
+    font-family: 'Philosopher', sans-serif;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+
+
+/*--------------Mobile Version-----------------------*/
+@media all and (max-width: 740px) {
+    h1 {
+        margin: 0 10px 20px;
+        font-size: 60px;
+    }
+}
+
+@media all and (max-width: 600px) {
+    header {
+        margin: 20px 20px 60px;
+    }
+
+    .button {
+        margin: 3px 15px;
+        font-size: 18px;
+    }   
+
+    .buttons_main {
+        margin: 0 0 50px;
+    }
+
+    .countdown_container {
+        font-size: 80px;
+        margin: 0 0 10px;
+    }
+}
+
+@media all and (max-width: 500px) {
+    h1 {
+        margin: 0 10px 10px;
+        font-size: 45px;
+    }
+
+    .button {
+        margin: 5px 10px;
+        font-size: 16px;
+        width: 70px;
+        height: 70px;
+        line-height: normal;
+    }  
+    
+    .set_timer {
+        padding: 10px 30px;
+    }
+
+    h2 {
+        font-size: 25px;
+        margin: 0;
+    }
+}
+
+
+@media all and (max-width: 350px) {
+    h1 {
+        font-size: 40px;
+    }
+
+    .button {
+        margin: 5px 5px;
+    }
+    
+    .set_timer {
+        padding: 10px;
+    }
+}
