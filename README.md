@@ -1,4 +1,4 @@
-# Travel calculator
+# Kitchen Timer
 
 ![cover](./assets/img/mockup.png)
 
